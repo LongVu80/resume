@@ -265,6 +265,7 @@
 
 function sendMail() {
   Email.send({
+    host : "thienlong14th@gmail.com",
     SecureToken : "346454bb-90d7-4c56-aa4d-564ff4dde7ff",
     To : 'thienlong14th@gmail.com',
     From : document.getElementById("email").value,
@@ -276,3 +277,27 @@ function sendMail() {
   message => alert("Message send successfully.")
 );
 }
+
+
+
+
+// const btn = document.querySelector('#sendMail')
+// const inputs = document.querySelector('mailForm')
+// btn.addEventListener('click', () => {
+
+//     const name = document.getElementById("name").value.trim()
+//     const email = document.getElementById("email").value.trim()
+//     const msg = document.getElementById("message").value.trim()
+//     // const phone = (inputs.elements["phone"].value).trim()
+//     if (!name.length > 0 || !email.length > 0 || !msg.length > 0) {
+//         alert("All fields are mandatory")
+//         return
+//     }
+//     Email.send({
+//       SecureToken : "346454bb-90d7-4c56-aa4d-564ff4dde7ff",
+//         To : 'thienlong14th@gmail.com',
+//         From: email,
+//         Subject: "Contact Us Query By the Customer",
+//         Body: msg + "<br>" + name + "<br>" + email
+//     }).then(msg => alert("The email successfully sent"))
+// })
