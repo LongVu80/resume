@@ -265,7 +265,6 @@
 
 function sendMail() {
   Email.send({
-    host : "thienlong14th@gmail.com",
     SecureToken : "346454bb-90d7-4c56-aa4d-564ff4dde7ff",
     To : 'thienlong14th@gmail.com',
     From : document.getElementById("email").value,
