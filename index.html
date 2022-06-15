@@ -392,6 +392,20 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap" style="border: 2px solid blue;">
+              <img src="assets/img/portfolio/s2t1.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Speech-To-Text With Translation</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/s2t1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 4"><i class="bx bx-plus"></i></a>
+                  <a href="speechTranslate.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap" style="border: 2px solid blue;">
               <img src="assets/img/portfolio/AmazonDaily.png" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Amazon Daily Report Log</h4>
@@ -712,7 +726,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
             <p style="color: red"> -- Under construction. Contact form is not working!! --</p>
-            <form  id="mailForm">
+            <form  id="mailForm" onsubmit="sendMail()">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -732,8 +746,8 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div> -->
-              <!-- <div class="text-center"><input type="submit" value="send mail" id="sendMail"/></div>  -->
-              <div class="text-center"><input type="submit" value="send mail" onclick="sendMail()"/></div>
+              <div class="text-center"><input type="submit" value="send mail" id="sendMail"/></div> 
+              <!-- <div class="text-center"><input type="submit" value="send mail" onclick="sendMail()"/></div> -->
             </form>
 
             
