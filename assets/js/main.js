@@ -267,57 +267,12 @@ window.onload = function() {
   document.getElementById('contact-form').addEventListener('submit', function(event) {
       event.preventDefault();
       // var params = {
-      //   from_name : document.getElementById("fullName").value,
-      //   email_id : document.getElementById("email_id").value,
-      //   subject : document.getElementById("subject").value,
-      //   message : document.getElementById("message").value,
-      // }
       // generate a five digit number for the contact_number variable
       this.contact_number.value = Math.random() * 100000 | 0;
       // these IDs from the previous steps
       emailjs.sendForm("service_mgidfk9", "template_4vetarh", this)
-          .then(function() {
-              console.log('SUCCESS!');
-          }, function(error) {
-              console.log('FAILED...', error);
-          });
+          .then(function(res){
+            alert("Email Successful send!" + res.status)
   });
+})
 }
-
-// function sendMail() {
-//   var params = {
-//     from_name : document.getElementById("fullName").value,
-//     email_id : document.getElementById("email_id").value,
-//     subject : document.getElementById("subject").value,
-//     message : document.getElementById("message").value,
-//   }
-//   emailjs.sendForm("service_mgidfk9", "template_4vetarh", params).then(function() {
-//     console.log('SUCCESS!');
-// }, function(error) {
-//     console.log('FAILED...', error);
-// });
-// }
-
-
-
-
-// const btn = document.querySelector('#sendMail')
-// const inputs = document.querySelector('mailForm')
-// btn.addEventListener('click', () => {
-
-//     const name = document.getElementById("name").value.trim()
-//     const email = document.getElementById("email").value.trim()
-//     const msg = document.getElementById("message").value.trim()
-//     // const phone = (inputs.elements["phone"].value).trim()
-//     if (!name.length > 0 || !email.length > 0 || !msg.length > 0) {
-//         alert("All fields are mandatory")
-//         return
-//     }
-//     Email.send({
-//       SecureToken : "346454bb-90d7-4c56-aa4d-564ff4dde7ff",
-//         To : 'thienlong14th@gmail.com',
-//         From: email,
-//         Subject: "Contact Us Query By the Customer",
-//         Body: msg + "<br>" + name + "<br>" + email
-//     }).then(msg => alert("The email successfully sent"))
-// })
