@@ -263,19 +263,40 @@
 
 })()
 
-function sendMail() {
-  Email.send({
-    SecureToken : "cd188130-f0c7-46f2-9947-34247a12f8e0",
-    To : 'athenavu21@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : document.getElementById("subject").value,
-    Body : 'Name: ' + document.getElementById("name").value +
-    "<br> Email: " + document.getElementById("email").value +
-    "<br> Message: " + document.getElementById("message").value,
-}).then(
-  message => alert("Message send successfully.")
-);
+window.onload = function() {
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // var params = {
+      //   from_name : document.getElementById("fullName").value,
+      //   email_id : document.getElementById("email_id").value,
+      //   subject : document.getElementById("subject").value,
+      //   message : document.getElementById("message").value,
+      // }
+      // generate a five digit number for the contact_number variable
+      this.contact_number.value = Math.random() * 100000 | 0;
+      // these IDs from the previous steps
+      emailjs.sendForm("service_mgidfk9", "template_4vetarh", this)
+          .then(function() {
+              console.log('SUCCESS!');
+          }, function(error) {
+              console.log('FAILED...', error);
+          });
+  });
 }
+
+// function sendMail() {
+//   var params = {
+//     from_name : document.getElementById("fullName").value,
+//     email_id : document.getElementById("email_id").value,
+//     subject : document.getElementById("subject").value,
+//     message : document.getElementById("message").value,
+//   }
+//   emailjs.sendForm("service_mgidfk9", "template_4vetarh", params).then(function() {
+//     console.log('SUCCESS!');
+// }, function(error) {
+//     console.log('FAILED...', error);
+// });
+// }
 
 
 
